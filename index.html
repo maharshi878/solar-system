@@ -9,8 +9,19 @@ body {
     background: #080e24;
     color: #626668;
 }
-
-/* Solar System Styles */
+#spinner {
+    animation: rotate 0.56s infinite linear;
+    width:50px;
+    height:50px;
+    border:12px solid #fff;
+    border-bottom:12px solid rgb(255, 50, 50);
+    border-radius:50%;
+    margin:0;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
 ul.solarsystem {
     position: relative;
     height: 640px;
@@ -359,10 +370,13 @@ ul.solarsystem li.pluto {-webkit-animation-duration:120s; -moz-animation-duratio
 @-moz-keyframes orbit { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
 @-moz-keyframes moon { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
 
-/*ul.solarsystem:hover li {-webkit-animation-play-state: paused;} */
+ul.solarsystem:hover li {-webkit-animation-play-state: paused;}
     </style>
   </head>
   <body>
+  <div id="loading">
+    <div id="spinner"></div>
+  </div>
   <section class="main">
 
 	<ul class="solarsystem">
